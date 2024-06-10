@@ -16,8 +16,10 @@
         <a-assets>
             <a-asset-item id="treesheet" src="./data/MGExport.csv"></a-asset-item>
             <a-asset-item id="demsheet" src="./data/MGdem.csv"></a-asset-item>
-            <img id="poimap" src="./images/MGMarkers.png">
-            <img id="slope" src="./images/MGSlopeDeg3Color.png">
+            <img id="gesat" src="./images/sat.png">
+            <img id="slope" src="./images/slope.png">
+            <img id="progression" src="./images/prog.png">
+            <img id="race" src="./images/race.png">
             <img id="p5" src="./images/P018.JPG">
             <a-asset-item id="nav" src="./models/navmesh.glb"></a-asset-item>
             <a-asset-item id="spotfire" src="./models/spotfire.glb"></a-asset-item>
@@ -64,7 +66,7 @@
         </a-entity>
         
         <!-- Constructed -->
-        <a-entity id="ground2" dem-builder2="texture: #poimap"></a-entity>
+        <a-entity id="ground2" dem-builder2="texture: #gesat"></a-entity>
         <a-entity id="trees" position="0 0 0" tree-builder></a-entity> <!-- tree-builder -->
         
         <!-- Navmesh -->
