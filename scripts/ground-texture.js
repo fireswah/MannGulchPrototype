@@ -4,8 +4,9 @@ AFRAME.registerComponent('ground-texture', {
 		target: { type: 'string', default: '' },
 		textures: { type: 'array', default: [
 			'#gesat', //Google Earth Sat
-			'#poimap', //Google EArth Sat with markers from Sam
-			'#slope' //3DEP DEM slope map 0-59 deg, green color ramp
+			'#slope', //3DEP DEM slope map 0-59 deg, green color ramp
+			'#progression',
+			'#race'
 		] },
 		index: { type: 'int', default: 1 }
 	},
@@ -23,13 +24,16 @@ AFRAME.registerComponent('ground-texture', {
             if( data.index === 0 ) {
                 target.setAttribute( 'material', 'src', data.textures[ 0 ] );
 				data.index = data.index + 1;
-            } else if ( data.index === 1 ) {
+            }else if ( data.index === 1 ) {
                 target.setAttribute( 'material', 'src', data.textures[ 1 ] );
 				data.index = data.index + 1;
-            } else if ( data.index === 2 ) {
+            }else if ( data.index === 2 ) {
                 target.setAttribute( 'material', 'src', data.textures[ 2 ] );
+				data.index = data.index + 1;
+            }else if ( data.index === 3 ) {
+                target.setAttribute( 'material', 'src', data.textures[ 3 ] );
 				data.index = 0;
-            };;
+            }
         });
     },
 	

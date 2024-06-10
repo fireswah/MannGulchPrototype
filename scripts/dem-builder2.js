@@ -14,7 +14,7 @@ AFRAME.registerComponent('dem-builder2', {
 	init: function () {
 		var el = this.el;
 		var data = this.data;
-        console.log( data.texture );
+        //console.log( data.texture );
         var demres = data.demRes;
         var ground = document.createElement( 'a-plane' );
         var sheet = document.querySelector('#demsheet');
@@ -24,10 +24,10 @@ AFRAME.registerComponent('dem-builder2', {
         this.demPoints = [];
         var zCoord = 0.0;
         rows = terraincoords.split(/\n/);
-        console.log( rows.length);
-        var nz = rows.length;//depth in AFrame - row.length //397
+        var nz = rows.length;//depth in AFrame - row.length //1498
         rowArray = rows[ 1 ].split(",");
         var nx = rowArray.length// rowArray.length;//width in AFrame //437
+        console.log( nz, nx );
         
         ground.setAttribute( 'id', 'planeground' );
         ground.setAttribute( 'width', demres * nx );
@@ -39,7 +39,7 @@ AFRAME.registerComponent('dem-builder2', {
         ground.setAttribute( 'material', 'src', data.texture );
         ground.setAttribute( 'material', 'roughness', 1.0 );
         ground.setAttribute( 'material', 'npot', true );
-        ground.setAttribute( 'material', 'offset', { x: 0.02, y: 0 } );
+        ground.setAttribute( 'material', 'offset', { x: 0, y: 0 } ); //{ x: 0.003, y: 0 }
         //ground.setAttribute( 'class', 'navmesh' );  //Way to big and gridlocks fps
 
         el.appendChild( ground );
