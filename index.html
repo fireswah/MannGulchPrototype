@@ -30,6 +30,8 @@
             <a-asset-item id="turnaroundicon" src="./models/turnaroundicon.glb"></a-asset-item>
             <a-asset-item id="tooldropicon" src="./models/tooldropicon.glb"></a-asset-item>
             <a-asset-item id="gisborne360" src="./models/360Gisborne.glb"></a-asset-item>
+            <a-asset-item id="canyonmouth360" src="./models/360CanyonMouth.glb"></a-asset-item>
+            <a-asset-item id="lunchspot360" src="./models/360Lunchspot.glb"></a-asset-item>
         </a-assets>
         
         <!--Setup Player-->
@@ -58,12 +60,13 @@
         
         <!-- Scene Objects -->
         
-        <!-- helper, remove on final -->
-        <a-entity id="axishelper" position="-235 -250 -700">
+        <!-- helper, remove on final
+        <a-entity id="axishelper" position="440 -130 380">
           <a-box id="posX" position="5 0 0" color="red" scale="3 1 1"></a-box>
           <a-box id="posY" position="0 5 0" color="blue" scale="1 3 1"></a-box>
           <a-box id="posZ" position="0 0 5" color="green" scale="1 1 3"></a-box>
         </a-entity>
+      -->
         
         <!-- Constructed -->
         <a-entity id="ground2" dem-builder2="texture: #gesat"></a-entity>
@@ -80,7 +83,6 @@
           <a-entity id="spotfire4" gltf-model="#spotfire" position="-243 -277 -859" scale="5 5 5" animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear"></a-entity>
           <a-entity id="spotfire5" gltf-model="#spotfire" position="-243 -276 -779" scale="5 5 5" animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear"></a-entity>
           <a-entity id="gisborne" gltf-model="#monument" position="-242 -272 -705" rotation="0 35 0" scale="1 1 1"></a-entity>
-          <a-entity class=pic id="360gisborne" gltf-model="#gisborne360" position="-245 -260 -700" rotation="0 30 0" scale="30 30 30" visible="false"></a-entity>
           <a-entity id="turnaround" gltf-model="#turnaroundicon" position="-41 -160 -550" scale="5 5 5" animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear"></a-entity>
           <a-entity id="tooldrop" gltf-model="#tooldropicon" position="230 -85 -295" scale="5 5 5" animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear"></a-entity>
           <a-entity id="escapefire" gltf-model="#escapefireicon" position="420 -45 -145" scale="5 5 5" animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear"></a-entity>
@@ -101,6 +103,12 @@
           <a-entity id="lunchspot" gltf-model="#jumpicon" position="440 -130 380" scale="5 5 5" animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear"></a-entity>
           <a-plane id="photo5" position="383 -136 336" rotation="0 -20 0" scale="8 8 8" height="2.104" width="3.200" material="src: #p5; opacity: .7"></a-plane>
         </a-entity>
+
+        <!-- 360 Photospheres-->
+        <a-entity class=pic id="360canyonmouth" gltf-model="#canyonmouth360" position="-285 -345 -1435" rotation="0 50 0" scale="30 30 30" visible="false"></a-entity>
+        <a-entity class=pic id="360gisborne" gltf-model="#gisborne360" position="-245 -260 -700" rotation="0 270 0" scale="30 30 30" visible="false"></a-entity>
+        <a-entity class=pic id="360lunchspot" gltf-model="#lunchspot360" position="420 -132 300" rotation="0 180 0" scale="30 30 30" visible="false"></a-entity>
+
     </a-scene>
   </body>
 </html>
@@ -111,15 +119,6 @@ position="-281 -357 -1461"
 MARKERS
 Possibly add rotation to each?
 Possibly add name as vertical text to each.
-
-TEXTURES
-Create and use non marked sat imagery map, try increasing dip to 200-300ish
-Create and match slope tri-color (30m dem base)
-If possible try to apply race that couldn't be won
-if possible try to apply fire spread per GETA GESR
-
-360 IMAGES
-Create and add a couple more
 
 TELEPORT
 Add ~5 main points to list
