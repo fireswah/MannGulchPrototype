@@ -108,7 +108,7 @@ AFRAME.registerComponent('tree-builder', {
 
     uniforms = {
 			"color": { value: data.color },
-			"texture1": { value: textureLoader.load( '/images/pondo1Image1920x1080.png', ( texture ) => {
+			"texture1": { value: textureLoader.load( './images/pondo1Image1920x1080.png', ( texture ) => {
                 texture.flipY = false; } ) },
             "screenheight": { value: data.innerHeight },
             "screenwidth": { value: data.innerWidth }
