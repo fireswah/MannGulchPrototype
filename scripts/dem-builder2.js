@@ -70,7 +70,7 @@ AFRAME.registerComponent('dem-builder2', {
             buffPos.needsUpdate = true;
             el.setAttribute( 'position', {
                 x: ( 0 ),
-                y: ( 540 ),
+                y: ( 543 ),
                 z: ( 0 )
               });
         });
